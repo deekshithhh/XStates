@@ -8,7 +8,7 @@ export default function CountrySelector() {
     const [statelist, setStatelist] = useState([])
     const [city, setCity] = useState('');
     const [citylist, setCitylist] = useState([]);
-    const [show, setShow] = useState(0)
+    const [show, setShow] = useState(false)
 
     const handlecountry = (e) => {
         console.log(e.target.value)
@@ -22,7 +22,7 @@ export default function CountrySelector() {
     }
     const handlecity = (e) => {
         setCity(e.target.value)
-        setShow(1)
+        setShow(true)
     }
 
     const fetchstates = async (country) => {
@@ -92,7 +92,7 @@ export default function CountrySelector() {
                     <option key={city} value={city}>{city}</option>
                 ))}
             </select>
-            {show ? <div>You Selected {city}, {states}, {country}</div> : <div></div>}
+            {show && <div>You Selected {city}, {states}, {country}</div>}
         </div>
 
     )
