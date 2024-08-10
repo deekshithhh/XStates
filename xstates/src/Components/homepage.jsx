@@ -37,6 +37,8 @@ export default function Homepage() {
 
         // console.log(country);
         setInitiallist(response.data);
+        setCity([]);
+        setStates([])
       } catch (e) {
         console.error(e);
       }
