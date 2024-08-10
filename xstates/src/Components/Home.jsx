@@ -94,8 +94,9 @@ export default function CountrySelector() {
                         <option key={city} value={city}>{city}</option>
                     ))}
                 </select>
+                {show ? <div>You Selected {city}, {states}, {country}</div> : <div></div>}
             </div>
-            {show ? <div>You Selected {city}, {states}, {country}</div> : <div></div>}
+
         </div>
     )
 }

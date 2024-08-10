@@ -6,8 +6,6 @@ import CountrySelector from "./Components/Home";
 function App() {
   return (
     <div >
-      {/* <Homepage /> */}
-      {/* <LocationSelector /> */}
       <CountrySelector />
     </div>
   );
