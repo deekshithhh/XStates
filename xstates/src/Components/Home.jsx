@@ -68,35 +68,32 @@ export default function CountrySelector() {
     return (
         <div>
             <h1>Select Location</h1>
-            <div>
-                <label htmlFor="country">Select Country: </label>
-                <select id="country" value={country} onChange={handlecountry}>
-                    <option value="" disabled>Select Country</option>
-                    {initiallist.map((country) => (
-                        <option key={country} value={country}>{country}</option>
-                    ))}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="state">Select State: </label>
-                <select id="state" value={states} onChange={handlestate}>
-                    <option value="" disabled>Select State</option>
-                    {statelist.map((state) => (
-                        <option key={state} value={state}>{state}</option>
-                    ))}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="city">Select City: </label>
-                <select id="city" value={city} onChange={handlecity}>
-                    <option value="" disabled>Select City</option>
-                    {citylist.map((city) => (
-                        <option key={city} value={city}>{city}</option>
-                    ))}
-                </select>
-                {show ? <div>You Selected {city}, {states}, {country}</div> : <div></div>}
-            </div>
 
+            <label htmlFor="country">Select Country: </label>
+            <select id="country" value={country} onChange={handlecountry}>
+                <option value="" disabled>Select Country</option>
+                {initiallist.map((country) => (
+                    <option key={country} value={country}>{country}</option>
+                ))}
+            </select>
+
+            <label htmlFor="state">Select State: </label>
+            <select id="state" value={states} onChange={handlestate}>
+                <option value="" disabled>Select State</option>
+                {statelist.map((state) => (
+                    <option key={state} value={state}>{state}</option>
+                ))}
+            </select>
+
+            <label htmlFor="city">Select City: </label>
+            <select id="city" value={city} onChange={handlecity}>
+                <option value="" disabled>Select City</option>
+                {citylist.map((city) => (
+                    <option key={city} value={city}>{city}</option>
+                ))}
+            </select>
+            {show ? <div>You Selected {city}, {states}, {country}</div> : <div></div>}
         </div>
+
     )
 }
