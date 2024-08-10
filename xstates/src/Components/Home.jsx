@@ -92,7 +92,7 @@ export default function CountrySelector() {
                     <option key={city} value={city}>{city}</option>
                 ))}
             </select>
-            {show && <div>You Selected {city}, {states}, {country}</div>}
+            {show && <div>You selected {city}, {states}, {country}</div>}
         </div>
 
     )
